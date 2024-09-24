@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from time import sleep
 
-
+@pytest.mark.regression
 @allure.feature('Menu Navigation')
 @allure.suite('Main Menu Tests')
 @allure.title('Verify navigation of main menu items')
@@ -285,7 +285,6 @@ def test_footer(driver, button, header, text):
         assert footer_header_text == text, f"Expected text '{text}', but got '{footer_header_text}'"
 
 
-@pytest.mark.smoke
 @pytest.mark.smoke
 @allure.feature('Slider Functionality')
 @allure.suite('Image Slider')
